@@ -1,6 +1,5 @@
-package de.wicked539.virtualthreadspg.reactive;
+package de.wicked539.virtualthreadspg.reactive.web;
 
-import de.wicked539.virtualthreadspg.core.ExpensiveService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
@@ -14,7 +13,7 @@ public class ReactiveController {
         this.expensiveService = expensiveService;
     }
 
-    @GetMapping("/reactive")
+    @GetMapping("/expensive")
     public Mono<Long> getExpensiveResource() {
         return Mono.fromCallable(expensiveService::calculateExpensiveNumber);
     }

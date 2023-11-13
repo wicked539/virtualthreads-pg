@@ -1,4 +1,4 @@
-package de.wicked539.virtualthreadspg.core;
+package de.wicked539.virtualthreadspg.reactive.web;
 
 import org.springframework.stereotype.Service;
 
